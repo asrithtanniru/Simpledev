@@ -7,9 +7,6 @@ import {
   LucideGithub,
   LucideDatabase,
   LucideNetwork,
-  LucideBrain,
-  LucideFlaskConical,
-  LucideScissorsSquare,
   LucideAtom
 } from "lucide-react";
 

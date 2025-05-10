@@ -24,7 +24,7 @@ export default function Home() {
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-4">Experience</h2>
         <ul className="list-disc pl-8 space-y-2">
-          <li>Educational Initiatives [jan 25' - present]</li>
+          <li>Educational Initiatives [Dec 2024 - May 2025]</li>
 
         </ul>
       </section>
