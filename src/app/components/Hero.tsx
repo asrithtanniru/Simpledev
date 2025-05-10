@@ -19,7 +19,6 @@ export default function Hero() {
             Resume
           </a>
         </div>
-        {/* Absolute positioning to align with the top portion of the text */}
         <div className="absolute top-0 right-0">
           <ProfileImage />
         </div>
