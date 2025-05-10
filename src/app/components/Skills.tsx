@@ -1,29 +1,11 @@
 "use client";
 
-import {
-  LucideCode,
-  LucideCodepen,
-  LucideBoxes,
-  LucideGithub,
-  LucideDatabase,
-  LucideNetwork,
-  LucideAtom
-} from "lucide-react";
-
-const skills = [
-  { name: "JavaScript", icon: LucideCode },
-  { name: "React", icon: LucideAtom },
-  { name: "Node.js", icon: LucideNetwork },
-  { name: "Python", icon: LucideCodepen },
-  { name: "Git", icon: LucideGithub },
-  { name: "Docker", icon: LucideBoxes },
-  { name: "SQL", icon: LucideDatabase }
-];
+import { skills } from "../data/data";
 
 export default function Skills() {
   return (
     <section className="mb-16">
-      <h2 className="text-2xl font-bold mb-4">skills</h2>
+      <h2 className="text-2xl font-bold mb-4">Skills</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
         {skills.map((skill) => {
