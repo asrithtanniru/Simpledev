@@ -4,7 +4,7 @@ import Hackathons from "./components/Hackathons";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import { BarChart3, Code, Code2, CodeIcon, CodeSquare, CodeXmlIcon, DownloadCloud, FileText, LucideCode, MessageSquare, PieChart, Send } from "lucide-react";
+import { Code, Code2, DownloadCloud, Send } from "lucide-react";
 
 export default function Home() {
   return (
