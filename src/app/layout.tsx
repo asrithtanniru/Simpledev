@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={jura.className}>
-      <body className="min-h-screen pb-16">
+      <body className="min-h-screen pb-16 bg-grid-pattern bg-grid ">
         <ThemeProvider>
           {children}
           <Footer />
