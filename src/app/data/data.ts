@@ -4,7 +4,6 @@ import {
   LucideGithub,
   LucideDatabase,
   LucideNetwork,
-  LucideBrain,
   LucideAtom,
   LucideIcon
 } from "lucide-react";
