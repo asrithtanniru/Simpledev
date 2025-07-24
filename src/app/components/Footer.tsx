@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-3xl mx-auto px-4">
         {socialLinks.map((link, index) => (
           <span key={link.name}>
-            <Link href={link.url} className="bold mx-2">{link.name}</Link>
+            <Link href={link.url} className="bold mx-2" target="_blank" rel="noopener noreferrer">{link.name}</Link>
             {index < socialLinks.length - 1 && " | "}
           </span>
         ))}

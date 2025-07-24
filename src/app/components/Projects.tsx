@@ -9,7 +9,7 @@ export default function Projects() {
         {projects.map((exp, index) => (
           <li key={index}>
             {exp.title} - {exp.description} -{" "}
-            <Link href={exp.link} className="bg-white rounded-md text-black p-0.7 px-1 py-1">
+            <Link href={exp.link} className="bg-white rounded-md text-black p-0.7 px-1 py-1" target="_blank" rel="noopener noreferrer">
               Source
             </Link>
           </li>

@@ -62,10 +62,10 @@ export const personalInfo = {
 
 export const skills: Skill[] = [
   { name: "JavaScript", icon: LucideCode },
-  { name: "React", icon: LucideAtom },
+  { name: "React Native", icon: LucideAtom },
   { name: "Node.js", icon: LucideNetwork },
   { name: "Python", icon: LucideCodepen },
-  { name: "Machine Learning", icon: LucideBrain },
+  // { name: "Machine Learning", icon: LucideBrain },
   { name: "Git", icon: LucideGithub },
   { name: "SQL", icon: LucideDatabase },
 ];
