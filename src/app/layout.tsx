@@ -1,32 +1,30 @@
-import type { Metadata } from "next";
-import { Jura } from 'next/font/google';
-import "./globals.css";
-import { ThemeProvider } from './components/Theme-provider'
-import Footer from "./components/Footer";
+import type { Metadata } from 'next'
+import { Rethink_Sans } from 'next/font/google'
+import './globals.css'
+import Footer from './components/Footer'
 
-const jura = Jura({
+const outfit = Rethink_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
-});
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-rethink-sans',
+})
 
 export const metadata: Metadata = {
-  title: "Asrith Tanniru",
+  title: 'Asrith Tanniru',
   description: "Asrith's Portfolio",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={jura.className}>
-      <body className="min-h-screen pb-16 bg-grid-pattern bg-grid ">
-        <ThemeProvider>
-          {children}
-          <Footer />
-        </ThemeProvider>
+    <html lang="en" className={outfit.variable}>
+      <body className="min-h-screen relative font-rethink-sans">
+        {children}
+        <Footer />
       </body>
     </html>
-  );
+  )
 }

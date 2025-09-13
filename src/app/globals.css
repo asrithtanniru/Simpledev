@@ -7,14 +7,14 @@
   --foreground: #171717;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: var(--font-rethink-sans), sans-serif;
+}
+
+body.hide-footer footer {
+  display: none;
 }
 
 @layer utilities {

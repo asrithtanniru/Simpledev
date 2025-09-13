@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'outfit': ['var(--font-outfit)', 'sans-serif'],
+      },
       backgroundImage: {
         'grid-pattern': `
           linear-gradient(to right, rgba(200, 200, 200, 0.2) 1px, transparent 2px),
