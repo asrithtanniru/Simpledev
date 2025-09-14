@@ -1,25 +1,27 @@
-"use client";
+'use client'
 
-import { skills } from "../data/data";
+import { skills } from '../data/data'
 
 export default function Skills() {
   return (
-    <section className="mb-16">
-      <h2 className="text-2xl font-bold mb-4">Skills</h2>
+    <section className="mb-8">
+      <h2 className="text-xl md:text-2xl font-bold mb-3">Skills</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+      <div className="flex flex-wrap gap-1.5 md:gap-2">
         {skills.map((skill) => {
-          const IconComponent = skill.icon;
+          const IconComponent = skill.icon
           return (
-            <div key={skill.name} className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-lg bg-background border border-foreground flex items-center justify-center mb-2">
-                <IconComponent size={32} />
-              </div>
-              <span className="text-sm text-center">{skill.name}</span>
+            <div
+              key={skill.name}
+              className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm font-medium"
+              style={{ backgroundColor: skill.color }}
+            >
+              <IconComponent size={14} className="md:w-4 md:h-4" />
+              <span className="whitespace-nowrap">{skill.name}</span>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }
