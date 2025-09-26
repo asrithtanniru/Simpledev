@@ -8,9 +8,13 @@ import { personalInfo } from '../data/data'
 export default function Hero() {
   const [showIntro, setShowIntro] = useState(true)
 
-  const handleIntroClick = () => {
-    setShowIntro(false)
-  }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     if (showIntro) {
@@ -27,7 +31,7 @@ export default function Hero() {
   return (
     <>
       {showIntro && (
-        <div className="fixed inset-0 flex items-center justify-center px-4 bg-white z-50 cursor-pointer" onClick={handleIntroClick}>
+        <div className="fixed inset-0 flex items-center justify-center px-4 bg-white z-50">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
