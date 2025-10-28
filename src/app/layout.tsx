@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Rethink_Sans } from 'next/font/google'
 import './globals.css'
-import Footer from './components/Footer'
+import ConditionalFooter from './components/ConditionalFooter'
 import { Analytics } from '@vercel/analytics/next'
 
 const outfit = Rethink_Sans({
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="min-h-screen relative font-rethink-sans">
         {children}
         <Analytics />
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   )

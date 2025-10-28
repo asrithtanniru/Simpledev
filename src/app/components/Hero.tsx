@@ -2,18 +2,26 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import ProfileImage from './ProfileImage'
 import { personalInfo } from '../data/data'
 
 export default function Hero() {
-  const [showIntro, setShowIntro] = useState(true)
+  const [showIntro, setShowIntro] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false)
-    }, 3000)
+    const hasSeenIntro = sessionStorage.getItem('hasSeenIntro')
 
-    return () => clearTimeout(timer)
+    if (!hasSeenIntro) {
+      setShowIntro(true)
+      sessionStorage.setItem('hasSeenIntro', 'true')
+
+      const timer = setTimeout(() => {
+        setShowIntro(false)
+      }, 3000)
+
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   useEffect(() => {
