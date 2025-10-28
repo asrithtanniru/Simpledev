@@ -126,7 +126,7 @@ export const projects: Project[] = [
     liveLink: 'https://koastec.com/svd/app',
   },
 ]
-export const education = [{ name: 'SRM University AP', course: 'B Tech in Computer Science Engineering', year: '[2023-2027]', logo: '/images/srm-logo.png' }]
+export const education = [{ name: 'SRM University AP', course: 'B Tech in Computer Science Engineering', year: '2023-2027', logo: '/images/srm-logo.png' }]
 
 // export const papers: Paper[] = [
 //   {
