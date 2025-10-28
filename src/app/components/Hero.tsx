@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import ProfileImage from './ProfileImage'
 import { personalInfo } from '../data/data'
 

@@ -36,7 +36,7 @@ export default function BlogPage() {
         </motion.h2>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} className="text-gray-600 mb-8 max-w-md mx-auto">
-          I'm working on some exciting articles about development, technology, and my journey. Stay tuned!
+          I&apos;m working on some exciting articles about development, technology. Stay tuned!
         </motion.p>
       </motion.div>
     </div>
