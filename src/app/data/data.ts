@@ -154,7 +154,7 @@ export const hackathons: Hackathon[] = [
 
 export const socialLinks: SocialLink[] = [
   { name: 'Github', url: 'https://github.com/asrithtanniru' },
-  { name: 'Twitter', url: 'https://twitter.com/asrithtanniru' },
+  { name: 'Twitter', url: 'https://twitter.com/asrithtwt' },
   { name: 'Linkedin', url: 'https://linkedin.com/in/asrithtanniru' },
   { name: 'Blog', url: '/blog' },
 ]
