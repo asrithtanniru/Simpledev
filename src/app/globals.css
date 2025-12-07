@@ -10,6 +10,63 @@ body.hide-footer footer {
   display: none;
 }
 
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+html:not(.theme-ready) * {
+  transition: none !important;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 999;
+  animation: reveal 0.5s ease-out;
+  filter: blur(0px);
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+::view-transition-old(root) {
+  filter: blur(1px);
+  animation: fade-blur 0.5s ease-out;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: circle(0px at var(--x, 50%) var(--y, 50%));
+    filter: blur(8px);
+  }
+  to {
+    clip-path: circle(var(--r, 100%) at var(--x, 50%) var(--y, 50%));
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-blur {
+  from {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  to {
+    filter: blur(4px);
+    opacity: 0.8;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

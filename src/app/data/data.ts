@@ -74,6 +74,7 @@ export const skills: Skill[] = [
 ]
 
 export const experiences: Experience[] = [
+  { title: 'React Native Developer', company: 'MyMomment', period: 'Oct 2025 - Present', logo: '/images/mymomment.png' },
   { title: 'React Native Developer', company: 'HelioWeb', period: 'Jun 2025 - Aug 2025', logo: '/images/helioweb.png' },
   { title: 'Board Member- Syndicate of Norman Lab', company: 'Next Tech Lab', period: 'Oct 2024 - Present', logo: '/images/ntl.png' },
   { title: 'Research Intern', company: 'SRM University', period: 'Jun 2025 - Jul 2025', logo: '/images/srm-logo.png' },

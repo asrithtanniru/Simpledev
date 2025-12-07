@@ -3,6 +3,7 @@ import { Rethink_Sans } from 'next/font/google'
 import './globals.css'
 import ConditionalFooter from './components/ConditionalFooter'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from './components/Theme-provider'
 
 const outfit = Rethink_Sans({
   subsets: ['latin'],
@@ -21,11 +22,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={outfit.variable}>
-      <body className="min-h-screen relative font-rethink-sans">
-        {children}
-        <Analytics />
-        <ConditionalFooter />
+    <html lang="en" className={outfit.variable} suppressHydrationWarning>
+      <body className="min-h-screen relative font-rethink-sans bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider>
+          {children}
+          <Analytics />
+          <ConditionalFooter />
+        </ThemeProvider>
       </body>
     </html>
   )

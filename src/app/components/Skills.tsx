@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Skills() {
   return (
     <section className="mb-8">
-      <h2 className="text-xl md:text-2xl font-bold mb-3">Skills</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Skills</h2>
 
       <div className="flex flex-wrap gap-1.5 md:gap-2">
         {skills.map((skill) => {
@@ -14,8 +14,7 @@ export default function Skills() {
           return (
             <motion.div
               key={skill.name}
-              className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm font-medium cursor-pointer"
-              style={{ backgroundColor: skill.color }}
+              className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1.5 md:py-2 rounded-full bg-primary text-primary-foreground text-xs md:text-sm font-medium cursor-pointer"
               whileHover="hovered"
               initial="default"
               animate="default"

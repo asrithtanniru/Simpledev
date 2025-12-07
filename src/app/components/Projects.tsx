@@ -9,7 +9,7 @@ import { FiGithub, FiExternalLink, FiDownload } from 'react-icons/fi'
 export default function Projects() {
   return (
     <section className="mb-8">
-      <h2 className="text-xl md:text-2xl font-bold mb-3">Projects</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-3 text-foreground">Projects</h2>
 
       <div className="grid gap-4 md:gap-6">
         {projects.map((project, index) => (
@@ -19,10 +19,10 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover="hovered"
-            className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-card border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <motion.div
-              className="bg-gray-50 h-48 md:h-80 relative overflow-hidden"
+              className="bg-muted h-48 md:h-80 relative overflow-hidden"
               variants={{
                 hovered: { scale: 1.05 },
                 default: { scale: 1 },
@@ -42,8 +42,8 @@ export default function Projects() {
             </motion.div>
 
             <div className="p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600 text-sm md:text-base mb-4">{project.description}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-foreground">{project.title}</h3>
+              <p className="text-muted-foreground text-sm md:text-base mb-4">{project.description}</p>
 
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {project.technologies.map((tech, techIndex) => (
@@ -53,7 +53,7 @@ export default function Projects() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 + techIndex * 0.05 }}
                     whileHover={{ scale: 1.1, y: -2 }}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md cursor-default"
+                    className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-md cursor-default"
                   >
                     {tech}
                   </motion.span>
@@ -67,7 +67,7 @@ export default function Projects() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition-colors"
+                      className="flex items-center gap-2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg hover:bg-primary/90 transition-colors"
                     >
                       <motion.span
                         variants={{
@@ -88,7 +88,7 @@ export default function Projects() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-2 px-3 py-2 border border-border text-foreground text-sm rounded-lg hover:bg-accent transition-colors"
                     >
                       <motion.span
                         variants={{
