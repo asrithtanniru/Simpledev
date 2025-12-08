@@ -19,18 +19,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') as Theme | null
 
-    // Only use stored theme if user has explicitly set it before
-    // First-time visitors always see light mode
     if (storedTheme) {
       setTheme(storedTheme)
       if (storedTheme === 'dark') {
         document.documentElement.classList.add('dark')
       }
+    } else {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark')
+        document.documentElement.classList.add('dark')
+      }
     }
-    // Default is already light, so no need to do anything for first-time visitors
 
     setMounted(true)
-    // Add theme-ready class after a small delay to enable transitions
     setTimeout(() => {
       document.documentElement.classList.add('theme-ready')
     }, 100)
@@ -51,15 +52,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     (event?: React.MouseEvent) => {
       const newTheme = theme === 'light' ? 'dark' : 'light'
 
-      // Check if View Transitions API is supported
-      if (typeof document !== 'undefined' && 'startViewTransition' in document && event) {
-        // Get click coordinates for the circular reveal
+      const isMobile = window.innerWidth < 768
+      if (typeof document !== 'undefined' && 'startViewTransition' in document && event && !isMobile) {
         const x = event.clientX
         const y = event.clientY
-        // Calculate the maximum radius needed to cover the entire screen
         const maxRadius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y))
 
-        // Set CSS custom properties for the animation origin
         document.documentElement.style.setProperty('--x', `${x}px`)
         document.documentElement.style.setProperty('--y', `${y}px`)
         document.documentElement.style.setProperty('--r', `${maxRadius}px`)
@@ -68,7 +66,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
           setTheme(newTheme)
         })
       } else {
-        // Fallback for browsers without View Transitions API
         setTheme(newTheme)
       }
     },

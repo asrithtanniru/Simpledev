@@ -32,17 +32,20 @@ export default function Hero() {
   useEffect(() => {
     if (showIntro) {
       document.body.classList.add('hide-footer')
+      document.documentElement.classList.add('hide-body')
     } else {
       document.body.classList.remove('hide-footer')
+      document.documentElement.classList.remove('hide-body')
     }
 
     return () => {
       document.body.classList.remove('hide-footer')
+      document.documentElement.classList.remove('hide-body')
     }
   }, [showIntro])
 
   if (showIntro === null) {
-    return null
+    return <div className="fixed inset-0 bg-background z-50" />
   }
 
   return (

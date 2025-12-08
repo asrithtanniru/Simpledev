@@ -20,7 +20,7 @@ export default function Experience() {
       <h2 className="text-2xl font-bold mb-3 text-foreground">Experience</h2>
       <div className="space-y-2">
         {experiences.map((exp, index) => (
-          <motion.div key={index} className="flex items-center justify-between p-3 rounded-lg hover:bg-accent/50 transition-colors" whileHover="hovered" initial="default" animate="default">
+          <motion.div key={index} className="flex items-center justify-between p-3 rounded-lg" whileHover="hovered" initial="default" animate="default">
             <div className="flex items-center space-x-4">
               {exp.logo && (
                 <motion.div
