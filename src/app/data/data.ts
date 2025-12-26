@@ -67,7 +67,7 @@ export const skills: Skill[] = [
   { name: 'Node.js', icon: SiNodedotjs, color: '#000000' },
   { name: 'Nest.js', icon: SiNestjs, color: '#000000' },
   { name: 'Python', icon: SiPython, color: '#000000' },
-  { name: 'PostgresSQL', icon: SiPostgresql, color: '#000000' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#000000' },
   { name: 'Docker', icon: SiDocker, color: '#000000' },
   { name: 'Git', icon: SiGit, color: '#000000' },
   { name: 'Postman', icon: SiPostman, color: '#000000' },
